@@ -4,6 +4,7 @@ import { Hello, HelloDesactivable } from './Hello';
 import { Horloge } from './Horloge';
 import { ButtonToggle } from './ButtonToggle';
 import HelloList from './HelloList';
+import { Counter, CounterDesactivable } from './Counter';
 
 class App extends Component {
 
@@ -37,15 +38,10 @@ class App extends Component {
     */
     return (
       <div className="App">
-        <Hello name="Romain" />
-        <Hello name="Edouard" />
-        <Horloge />
-        {this.state.showHorloge && <Horloge />}
-        <ButtonToggle onToggle={this.toggleButton} />
-        <HelloList />
-        <hr />
-        Desactivable
-        <HelloDesactivable name="Romain" />
+        <h2>Compteur simple</h2>
+        <Counter />
+        <h2>Compteur desactivable (via HOC)</h2>
+        <CounterDesactivable show={true} />
       </div>
     );
   }

@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "todo-react"
+		},
+		{
+			"path": "hello-redux"
 		}
 	],
 	"settings": {}
