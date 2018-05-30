@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class ButtonToggle extends Component {
   state = {
-    on: true,
+    on: this.props.on,
   }
   toggle = () => {
     this.setState({
@@ -28,7 +28,7 @@ class ButtonToggle extends Component {
 
   render() {
     return (
-      <button onClick={this.toggle}>{this.state.on ? 'On' : <i>Off</i>}</button>
+      <button onClick={this.toggle}>{this.state.on ? 'Off' : <i>On</i>}</button>
     );
   }
 }

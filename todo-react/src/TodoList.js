@@ -26,7 +26,7 @@ class TodoList extends PureComponent {
     return (
       <div>{list}</div>
     );
-  };
+  }
 }
 
 TodoList.propTypes = {

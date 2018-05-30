@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ButtonToggle } from './ButtonToggle';
+import { ButtonToggle } from '../components/ButtonToggle';
 
 // Higher order component (hoc)
 const desactivable = (InnerComponent) => {

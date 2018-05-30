@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { TodoItem } from './TodoItem';
 
 let cptTodoListRender = 0;
@@ -18,9 +19,6 @@ class TodoList extends PureComponent {
 
   render() {
     const todos = this.props.todos;
-
-    console.log('cptTodoListRender', ++cptTodoListRender);
-
     const list = todos.map((todo, i) => <TodoItem todo={todo} key={i} />);
 
     return (

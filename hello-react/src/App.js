@@ -1,32 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Hello, HelloDesactivable } from './Hello';
-import { Horloge } from './Horloge';
+import { Horloge, HorlogeDesactivable } from './Horloge';
 import { ButtonToggle } from './ButtonToggle';
 import HelloList from './HelloList';
 
 class App extends Component {
-
-  // Class property ESNext
-  state = {
-    showHorloge: true,
-  };
-
-  toggleButton = () => {
-    this.setState({
-      showHorloge: !this.state.showHorloge,
-    });
-  }
-
-  /*
-  constructor() {
-    super();
-    this.state = {
-      showHorloge: true,
-    };
-    this.toggleButton = this.toggleButton.bind(this); // ES5
-  }
-  */
 
   render() {
     /*
@@ -40,12 +19,11 @@ class App extends Component {
         <Hello name="Romain" />
         <Hello name="Edouard" />
         <Horloge />
-        {this.state.showHorloge && <Horloge />}
-        <ButtonToggle onToggle={this.toggleButton} />
+        <HorlogeDesactivable show={true} />
         <HelloList />
         <hr />
         Desactivable
-        <HelloDesactivable name="Romain" />
+        <HelloDesactivable name="Romain" show={false} />
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { desactivable } from './desactivable';
 
 /* ES5
 function Horloge() {}
@@ -37,6 +38,9 @@ class Horloge extends Component {
   }
 }
 
+const HorlogeDesactivable = desactivable(Horloge);
+
 export {
   Horloge,
+  HorlogeDesactivable,
 };

@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Hello, HelloDesactivable } from './Hello';
-import { Horloge } from './Horloge';
-import { ButtonToggle } from './ButtonToggle';
-import HelloList from './HelloList';
-import { Counter, CounterDesactivable } from './Counter';
+import { Counter, CounterDesactivable, CounterReduxContainer, CounterReduxContainerDesactivable } from './Counter';
 
 class App extends Component {
 
@@ -42,6 +38,11 @@ class App extends Component {
         <Counter />
         <h2>Compteur desactivable (via HOC)</h2>
         <CounterDesactivable show={true} />
+        <h2>Compteur Redux</h2>
+        <CounterReduxContainer index={0} />
+        <CounterReduxContainer index={1} />
+        <h2>Compteur Redux desactivable (via HOC)</h2>
+        <CounterReduxContainerDesactivable />
       </div>
     );
   }

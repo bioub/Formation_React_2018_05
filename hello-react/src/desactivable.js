@@ -18,11 +18,11 @@ const desactivable = (InnerComponent) => {
     }
 
     render() {
-      const {show, ...innerProps} = this.props; // SPREAD properties
+      const {show, ...innerProps} = this.props; // ES6 + ES9 SPREAD properties
       return (
         <div>
           {this.state.show && <InnerComponent {...innerProps} />}
-          <ButtonToggle onToggle={this.toggle} />
+          <ButtonToggle onToggle={this.toggle} on={this.state.show} />
         </div>
       );
     }
